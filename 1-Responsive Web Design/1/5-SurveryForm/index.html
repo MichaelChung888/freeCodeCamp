@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">MiCode Survey Form</h1>
+            <p id="description"> Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-control">
+                <label id="name-label" for="name">Name <input type="text" id="name" placeholder="Enter your Name" required></label>
+            </div>
+            <div class="form-control">
+                <label id="email-label" for="email">Email <input type="email" id="email" placeholder="Enter your Email" required></label>
+            </div>
+            <div class="form-control">
+                <label id="number-label" for="age">Age <input type="number" id="number" placeholder="Enter your Age" min=13 max=100 required></label>
+            </div>
+            <div class="form-control">
+                <label for="role">
+                    <p>Which of the following best describes your current employment?</p> 
+                    <select id="role" name="role" required>
+                        <option disabled selected value="">Select current employment</option>
+                        <option value="a1">Student</option>
+                        <option value="a2">Full Time Work</option>
+                        <option value="a3">Part Time Work</option>
+                        <option value="a4">Full Time Learner</option>
+                        <option value="a5">Unemployed</option>
+                        <option value="a6">Prefer not to say</option>
+                        <option value="a7">Other</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-control">
+                <label for="other">If you selected "Other" as your option, please provide more detail, otherwise put "N/A"<input type="text" id="age" placeholder="Enter your Employment" required></label>
+            </div>
+            <div class="form-control">
+                <p>Would you recommend MiCode to a friend?</p>
+                <label for="user-recommend"><input type="radio" name="user-recommend" checked value="Def"> Definently</label> <br>
+                <label for="user-recommend"><input type="radio" name="user-recommend" value="May"> Maybe</label> <br>
+                <label for="user-recommend"><input type="radio" name="user-recommend" value="No"> Not Sure</label> <br>
+            </div>
+            <div class="form-control">
+                <label for="name">
+                    <p>What is your favourite feature of MiCode?</p> 
+                    <select id="dropdown" class="closer" required>
+                        <option disabled selected value="">Select favourite feature</option>
+                        <option value="b1">Challenges</option>
+                        <option value="b2">Projects</option>
+                        <option value="b3">Community</option>
+                        <option value="b4">Open Source</option>
+                        <option value="b5">Tests</option>
+                        <option value="b6">Other</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-control">
+                <label for="other">If you selected "Other" as your option, please provide more detail, otherwise put "N/A"<input type="text" id="age" placeholder="Enter your Employment" required></label>
+            </div>
+            <div class="form-control">
+                <p>What would you like to see improved? (Check all that apply)</p>
+                <label for="front-end"><input id="front-end" type="checkbox" name="front-end" value="FE-proj"/> Front-End Projects</label> <br>
+                <label for="back-end"><input id="back-end" type="checkbox" name="back-end" value="BE-proj"/> Back-End Projects</label> <br>
+                <label for="data-visualiztion"><input id="data-visualiztion" type="checkbox" name="data-visualiztion" value="DV"/> Data Visualization</label> <br>
+                <label for="challeneges"><input id="challeneges" type="checkbox" name="challeneges" value="Chal"/> Challenges</label> <br>
+                <label for="open-source"><input id="open-source" type="checkbox" name="open-source" value="OSC"/> Open Source Community</label> <br>
+                <label for="help-rooms"><input id="help-rooms" type="checkbox" name="help-rooms" value="HR"/> Help Rooms</label> <br>
+                <label for="videos"><input id="videos" type="checkbox" name="videos" value="Vid"/> Videos</label> <br>
+                <label for="meetup"><input id="meetup" type="checkbox" name="meetup" value="IPM"/> In-Person Meetups</label> <br>
+                <label for="wiki"><input id="wiki" type="checkbox" name="wiki" value="Wiki"/> Wiki</label> <br>
+                <label for="forum"><input id="forum" type="checkbox" name="forum" value="Forum"/> Forum</label> <br>
+                <label for=><input id="courses" type="checkbox" name="courses" value="AC"/> Additional Courses</label> <br>
+            </div>
+            <div class="form-control">
+                <p>Any Comments or suggestions?</p>
+                <textarea id="bio" name="bio" rows="8" cols="30" placeholder="Enter your suggestions here..."></textarea>
+            </div>
+            <input id="submit" type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>

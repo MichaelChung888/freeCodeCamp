@@ -1,0 +1,144 @@
+* {
+    color: #db7900;
+    font-family: Dekko;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+#bubu3 {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;   
+}
+
+#bubu1 {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#bubu2 {
+    width:100px;
+    height:auto;
+    border-radius: 5px;
+}
+
+header {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 50px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.title h1 {
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+body {
+    background-color: #db7900;
+
+    margin: 0;
+}
+
+figure {
+    width: 80%;
+    background-color: #f3f3f3;
+    margin: 200px auto 50px auto;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#image {
+    width: 80%;
+    height: auto;
+    margin: 10px auto 0 auto;
+    display: block;
+    border-radius: 10px;
+    max-height: 800px;
+    max-width: 100%;
+}
+
+figure p {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.tribute-info {
+    background-color: #f3f3f3;
+    width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    list-style-position: inside;
+    text-align: center;
+    
+
+}
+
+.info {
+    text-align: left;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.break {
+    border-bottom: 2px solid rgb(210, 210, 210);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pictures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+}
+
+.pic {
+    width: auto;
+    min-width: 150px;
+    height: 220px;
+    border-radius: 5px;    
+    margin:5px;  
+    object-fit: cover;
+}
+
+.dividers {
+    margin-bottom: 50px;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    margin-left: 30px;
+}
+
+.large {
+    font-size: 30px;
+    margin-bottom: 0;
+}

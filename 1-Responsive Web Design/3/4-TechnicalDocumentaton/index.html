@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar" class="sidenav">
+        <header>C++ Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Why_use_C++">Why use C++</a></li>
+            <li><a class="nav-link" href="#C++_and_C">C++ and C</a></li>
+            <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+            <li><a class="nav-link" href="#Comments">Comments</a></li>
+            <li><a class="nav-link" href="#C++_Variables">C++ Variables</a></li>
+            <li><a class="nav-link" href="#Variable_Operations">Variable Operations</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>   
+    </nav>
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header >Introduction</header>
+            <p class="indent">C++ is a cross-platform language that can be used to create high-performance applications.</p>
+            <p class="indent">C++ was developed by Bjarne Stroustrup, as an extension to the C language.</p>               
+            <p class="indent">C++ gives programmers a high level of control over system resources and memory.</p> 
+            <p class="indent">The language was updated 4 major times in 2011, 2014, 2017, and 2020 to C++11, C++14, C++17, C++20.</p>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="Why_use_C++">
+            <header >Why use C++</header>
+            <p class="indent">There are some key reasons as to why you should use C++ as a programming language:</p>
+            <ul class="indent-bul">
+                <li>C++ is one of the world's most popular programming languages.</li>
+                <li>C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.</li>
+                <li>C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</li>
+                <li>C++ is portable and can be used to develop applications that can be adapted to multiple platforms.</li>
+                <li>C++ is fun and easy to learn!</li>
+                <li>As C++ is close to C, C# and Java, it makes it easy for programmers to switch to C++ or vice versa.</li>
+            </ul>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="C++_and_C" >
+            <header >C++ and C</header>
+            <p class="indent">The difference between C++ and C is that C++ was developed as an extension of C, and both languages have almost the same syntax.</p>
+            <p class="indent">The main difference between C and C++ is that C++ support classes and objects, while C does not.</p>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="Hello_World" >
+            <header >Hello World</header>
+            <p class="indent">To get started, we can make a simple program of "Hello World"</p>
+            <pre><code>
+        #include "iostream"
+
+        int main() {
+            std::cout << "Hello World!";
+            return 0;
+        }                 
+            </code></pre>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="Comments" >
+            <header >Comments</header>
+            <p class="indent">Single-line comments start with two forward slashes (//).</p>
+            <p class="indent">Any text between // and the end of the line is ignored by the compiler (will not be executed).</p>
+            <p class="indent">Example: This example uses a single-line comment before a line of code:</p>
+            <pre><code>
+        <label class="green">// This is a comment</label>
+        std::cout << "Hello World!";              
+            </code></pre>
+            <p class="indent">Multi-line comments start with /* and ends with */.</p>
+            <p class="indent">Any text between /* and */ will be ignored by the compiler.</p>
+            <p class="indent">Example: This example uses a multi-line comment:</p>
+            <pre><code>
+        <label class="green">/* The code below will print the words Hello World!</label>
+        <label class="green">to the screen, and it is amazing */</label>
+        std::cout << "Hello World!";          
+            </code></pre>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="C++_Variables">
+            <header  >C++ Variables</header>
+            <p class="indent">Variables are containers for storing data values.</p>
+            <p class="indent">In C++, there are different types of variables (defined with different keywords), for example:</p>
+            <ul class="indent-bul">
+                <li>int - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                <li>double - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                <li>string - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+                <li>bool - stores values with two states: true or false</li>
+            </ul>
+            <p class="indent">To create a variable, specify the type and assign it a value:</p>
+            <pre><code>
+        type variableName = value;
+            </code></pre>
+            <p class="indent">Example: Create a variable called myNum of type int and assign it the value 15:</p>
+            <pre><code>
+        int myNum = 15;
+        std::cout << myNum;
+            </code></pre>
+            <p class="indent">Example: Examples of other Variable types</p>
+            <pre><code>
+        int myNum = 5;                  <label class="green">// Integer (whole number without decimals)</label>
+        double myFloatNum = 5.99;       <label class="green">// Floating point number (with decimals)</label>
+        char myLetter = 'D';            <label class="green">// Character</label>
+        string myText = "Hello";        <label class="green">// String (text)</label>
+        bool myBoolean = true;          <label class="green">// Boolean (true or false)</label>
+            </code></pre>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="Variable_Operations">
+            <header >Variable Operations</header>
+            <p class="indent">Operators are used to perform operations on variables and values.</p>
+            <p class="indent">Example: In the example below, we use the + operator to add together two values.</p>
+            <pre><code>
+        int x = 100 + 50;
+            </code></pre>
+            <p class="indent">Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value</p>
+            <p class="indent">or a variable and another variable:</p>
+            <p class="indent">Example: Adding variables and numbers together.</p>
+            <pre><code>
+        int sum1 = 100 + 50;        <label class="green">// 150 (100 + 50)</label>
+        int sum2 = sum1 + 250;      <label class="green">// 400 (150 + 250)</label>
+        int sum3 = sum2 + sum2;     <label class="green">// 800 (400 + 400)</label>
+            </code></pre>
+            <p class="indent">Heres a list of the different operators:</p>
+            <div class="tab">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th class="thead box">Operator</th>
+                            <th class="thead box">Name</th>
+                            <th class="thead box">Description</th>
+                            <th class="thead box">Example</th>
+                        </tr>
+                        <tr class="gray">
+                            <td class="box">+</td>
+                            <td class="box">Addition</td>
+                            <td class="box">Adds two values</td>
+                            <td class="box">x + y</td>
+                        </tr>
+                        <tr>
+                            <td class="box">-</td>
+                            <td class="box">Subtraction</td>
+                            <td class="box">Subtracts one value from another</td>
+                            <td class="box">x - y</td>
+                        </tr>
+                        <tr class="gray">
+                            <td class="box">*</td>
+                            <td class="box">Multiplication</td>
+                            <td class="box">Multiplies two values</td>
+                            <td class="box">x * y</td>
+                        </tr>
+                        <tr>
+                            <td class="box">/</td>
+                            <td class="box">Division</td>
+                            <td class="box">Divides one value by another</td>
+                            <td class="box">x / y</td>
+                        </tr>
+                        <tr class="gray">
+                            <td class="box">%</td>
+                            <td class="box">Modulus</td>
+                            <td class="box">Returns the division remainder</td>
+                            <td class="box">x % y</td>
+                        </tr>
+                        <tr>
+                            <td class="box">++</td>
+                            <td class="box">Increment</td>
+                            <td class="box">Increases the value of a variable by 1</td>
+                            <td class="box">x++</td>
+                        </tr>
+                        <tr class="gray">
+                            <td class="box">--</td>
+                            <td class="box">Decrement</td>
+                            <td class="box">Decreases the value of a variable by 1</td>
+                            <td class="box">x--</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="Reference">
+            <header  >Reference</header>
+            <p class="indent">All the documentation in this page is taken from <a href="https://www.w3schools.com/cpp/">W3Schools</a></p>
+        </section>
+    </main>
+    
+</body>
+</html>
