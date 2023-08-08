@@ -1,0 +1,65 @@
+.header {
+  text-align: center;
+}
+
+/*
+.blog-post {
+  background-color: lightblue;
+  @include border-radius(15px);
+}
+
+.blog-post, h2 {
+    color: $text-color;
+}
+*/
+.blog-post {
+  background-color: lightblue;
+  border-radius: 15px;
+}
+.blog-post h2 {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+
+.text-1 {
+  font-size: 15px;
+}
+
+.text-2 {
+  font-size: 30px;
+}
+
+.text-3 {
+  font-size: 45px;
+}
+
+.text-4 {
+  font-size: 60px;
+}
+
+.text-5 {
+  font-size: 75px;
+}
+
+.text-6 {
+  font-size: 90px;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+/* Alternative way of writing is
+
+*//*# sourceMappingURL=styles.css.map */

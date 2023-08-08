@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25+5 Clock</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d6d0311a0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <h1>25 + 5 Clock - Michael Chung</h1>
+
+    <div class="settings">
+        <div id="session-label" class="length">
+            <h3>Session Length</h3>
+            <div class="flex">
+                <p id="session-length">25:00</p>
+                <button id="session-decrement" value="session-decrement"><i class="fa-solid fa-arrow-down" value="session-decrement"></i></button>
+                <button id="session-increment" value="session-increment"><i class="fa-solid fa-arrow-up" value="session-increment"></i></button>
+            </div>
+        </div>
+        <div id="break-label" class="length">
+            <h3>Break Length</h3>
+            <div class="flex">
+                <p id="break-length">5:00</p>
+                <button id="break-decrement" value="break-decrement"><i class="fa-solid fa-arrow-down" value="break-decrement"></i></button>
+                <button id="break-increment" value="break-increment"><i class="fa-solid fa-arrow-up" value="break-increment"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="timer-label" class="timer-label">
+        <div class="session-time">
+            <h3>Session Time</h3>
+            <p id="session-time">25:00</p>
+        </div>
+        <div class="break-time">
+            <h3>Break Time</h3>
+            <p id="break-time">5:00</p>
+        </div>
+        <div class="controls">
+            <button id="start_stop" value="start-stop" onclick="startstop()"><i id="start_stop_icon" class="fa-solid fa-play"></i></button>
+            <button id="reset" value="reset" onclick="reset()"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+//1) VARIABLES
+//scss variables are defined starting with $ then its name
+$text-color: red;
+
+.header{
+    text-align: center;
+}
+
+
+
+//2) MIXINS 
+//mixins are like functions in scss. You can resuse the function and apply it to elements/selectors using @include
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius; // Note webkit is browser engine for Chrome and Safari
+  -moz-border-radius: $radius; // moz(Mozilla) is FireFox
+  -ms-border-radius: $radius; // ms is for IE
+  border-radius: $radius;
+}
+
+
+
+//3) NESTING
+/*
+
+.blog-post {
+  background-color: lightblue;
+  @include border-radius(15px);
+}
+
+.blog-post, h2 {
+    color: $text-color;
+}
+
+*/
+//The following above can be nested into the following code below to make it cleaner:
+.blog-post {
+  background-color: lightblue;
+  @include border-radius(15px);
+
+  h2 {
+    color: $text-color;
+  }
+
+}
+
+
+
+//4) @if @else
+@mixin color-stroke($val){
+  @if $val == yellow {
+    color: yellow;
+  }
+  @else if $val == red{
+    color: red;
+  }
+  @else if $val == blue {
+    color: blue
+  }
+  @else {
+    color: black
+  }
+}
+
+p {
+  @include color-stroke(blue);
+}
+
+
+
+//5) @for @while
+//This can be useful for making grids or tables
+@for $j from 1 through 6 {
+  .text-#{$j} { font-size: 15px * $j; } //#{$j} is the syntax if you want to convert the variable "j" into a string/text
+}
+/* Alternative way with @while:
+
+$x: 1;
+@while $x <= 5 {
+  .text-#{$x} { font-size: 15px * $x; }
+  $x: $x + 1;
+}
+
+*/
+
+
+//6 @each
+@each $color in blue, black, red {
+  .#{$color}-bg { background-color: $color; }
+}
+/* Alternative way of writing is:
+
+$colors: (color1: blue, color2: black, color3: red);
+
+@each $key, $color in $colors {
+  .#{$color}-bg { background-color: $color; }
+}
+
+*/
+
+
+
+//7) PARTIALS
+/*
+Partials in Sass are separate files that hold segments of CSS code. These are imported and used in other Sass files.
+Names for partials start with the underscore (_) character, which tells Sass it is a small segment of CSS and not to convert it into a CSS file. e.g:
+
+For example, if all your mixins are saved in a partial named "_mixins.scss", and they are needed in the "main.scss" file:
+
+@import 'mixins'
+
+in the main.scss file. (Note: Note that the underscore and file extension are not needed in the import statement)
+*/
+
+
+
+//8) @extend
+//extend makes it easy to borrow the CSS rules from one element and build upon them in another.
+.info{
+  width: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.info-important{
+  @extend .info;
+  background-color: magenta;
+}

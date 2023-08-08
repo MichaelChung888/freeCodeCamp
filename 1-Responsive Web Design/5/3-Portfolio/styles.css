@@ -1,9 +1,22 @@
+:root {
+    --color-white: #f6fafe;
+    --color-lightblue0: #e9f1fA;
+    --color-lightblue1: #cae3ff;
+    --color-blue: #00abe4;
+    --color-darkblue: #1c4483;
+    --square-lightblue0: #dbecfe;
+    --square-lightblue1: #bcdafd;
+    --color-text: black;
+    --color-specialtext: #938ba1;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display';
     scroll-margin-top: 60px;
+    font-size: 16px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,7 +29,7 @@ nav {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-color: #f6fafe;
+    background-color: var(--color-white);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     top: 0;
@@ -25,7 +38,7 @@ nav {
 }
 
 .nav-header {
-    color: #00ABE4;
+    color: var(--color-blue);
     font-size: 50px;
     margin: auto 30px;
 }
@@ -39,7 +52,7 @@ nav {
 
 .nav-list a {
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
 }
 
 #nav-icon {
@@ -57,13 +70,13 @@ nav {
 .nav-button {
     margin: auto;
     color: white;
-    background-color: #00ABE4;
+    background-color: var(--color-blue);
     border: none;
     width: 120px;
     height: 45px;
     text-align: center;
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial, Helvetica, sans-serif';
     border-radius: 5px;
     text-align: center;
     padding: auto;
@@ -75,33 +88,293 @@ nav {
 
 #welcome-section {
     height: 80vh;
-    background: linear-gradient(180deg, #E9F1FA 60%, #cae3ff);
+    background: linear-gradient(180deg, var(--color-lightblue0) 60%, var(--color-lightblue1));
     margin-top: 10vh;
     position: relative;
     scroll-margin-top: 100px;
+    display: grid;
+    align-content: center;
+    place-items: center; /*This is align-items and justify-items together */
 }
+
+.upper-squares {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.upper-square-1 {
+    width: 10%;
+    height: 20%;
+    background: linear-gradient(45deg, var(--square-lightblue0) 30%, var(--square-lightblue1) 70%, var(--square-lightblue0));
+    border-radius: 8% 8% 8% 8%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    animation: wobble1 5s infinite linear;
+}
+
+.upper-square-2 {
+    width: 10%;
+    height: 30%;
+    background: linear-gradient(45deg, var(--square-lightblue0) 30%, var(--square-lightblue1) 70%, var(--square-lightblue0));
+    border-radius: 8% 8% 8% 8%;
+    position: absolute;
+    left: 85%;
+    top: 5%;
+    animation: wobble2 5s infinite linear;
+}
+
+@keyframes wobble1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, 5%);
+    }
+    50% {
+        transform: translate(-5%, 5%);
+    }
+    75% {
+        transform: translate(-5%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes wobble2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(5%, 0);
+    }
+    50% {
+        transform: translate(5%, 5%);
+    }
+    75% {
+        transform: translate(0, 5%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
 .welcome-grid {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 70%;
     height: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-content: center;
+    place-items: center;
 }
 
+.welcome-p1 {
+    color: var(--color-specialtext);
+    text-align: left;
+    margin: 3%;
+    font-size: 150%;
+}
+
+.dynamic-header {
+    height: 15vh;
+    overflow: hidden;
+    text-align: left;
+    margin: 3%;
+    color: var(--color-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+.dynamic-header li {
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 14s 1s steps(2) infinite;
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -30vh;
+    }
+}
+
+.dynamic-header span {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 7.5vh;
+}
+
+
+.line1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-lightblue0);
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid black;
+    animation: typing1 7s 1s steps(20) infinite, border1 7s 1s steps(1) infinite;
+}
+
+.line2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-lightblue0);
+    height: 100%;
+    width: 100%;
+    animation: typing2 7s 1s steps(20) infinite, border2 7s 1s steps(1) infinite;
+}
+
+
+@keyframes typing1 {
+    21% {
+        left: 100%;
+    }
+    70% {
+        left: 100%;
+    }
+    90% {
+        left: 0%;
+    }
+}
+
+@keyframes border1 {
+    21% {
+        border: none;
+    }
+    70% {
+        border-left: 2px solid black;
+    }
+}
+
+@keyframes typing2 {
+    21% {
+        left: 0%;
+    }
+    49% {
+        left: 100%;
+    }
+    70% {
+        left: 100%;
+    }
+    90% {
+        left: 0%;
+    }
+}
+
+@keyframes border2 {
+    21% {
+        border-left: 2px solid black;
+    }
+    90% {
+        border: none;
+    }
+}
+
+@keyframes typing3 {
+    0% {
+        left: 0%;
+    }
+    21% {
+        left: 100%;
+    }
+    70% {
+        left: 100%;
+    }
+    90% {
+        left: 0%;
+    }
+}
+
+@keyframes border1 {
+    0% {
+        border-left: 2px solid black;
+    }
+    21% {
+        border: none;
+    }
+    70% {
+        border-left: 2px solid black;
+    }
+}
+
+@keyframes typing2 {
+    0% {
+        left: 0%;
+    }
+    21% {
+        left: 0%;
+    }
+    49% {
+        left: 100%;
+    }
+    70% {
+        left: 100%;
+    }
+    90% {
+        left: 0%;
+    }
+}
+
+@keyframes border2 {
+    0% {
+        border: none;
+    }
+    21% {
+        border-left: 2px solid black;
+    }
+    90% {
+        border: none;
+    }
+}
+
+.line3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-lightblue0);
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid black;
+    animation: typing1 7s 1s steps(20) infinite, border1 7s 1s steps(1) infinite;
+}
+
+.line4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-lightblue0);
+    height: 100%;
+    width: 100%;
+    animation: typing2 7s 1s steps(20) infinite, border2 7s 1s steps(1) infinite;
+}
+
+/*
 .welcome-header {
     font-size: 50px;
-    text-align: center;
-    margin: 10px;
-    color: #00ABE4;
+    text-align: left;
+    margin: 3%;
+    color: var(--color-blue);
 }
+*/
 
-.welcome-paragraph {
-    text-align: center;
-    margin: 20px 10px;
+.welcome-p2 {
+    text-align: left;
+    margin: 3%;
 }
 
 .picture {
@@ -110,14 +383,15 @@ nav {
     object-fit: cover;
     border-radius: 100%;
     margin: 0 auto;
-    border: 5px solid black;
+    border: 5px solid var(--color-text);
+    z-index: 1;
 }
 
 .about {
     height: 700px;
     width: 100%;
     padding: 5% 10%;
-    background-color: #f6fafe;
+    background-color: var(--color-white);
 }
 
 .about-header {
@@ -127,7 +401,7 @@ nav {
 
 .br {
    width: 100%;
-   border-bottom: 3px double #00ABE4;
+   border-bottom: 3px double var(--color-blue);
    margin: 20px; 
    position: relative;
    right: 20px;
@@ -156,7 +430,7 @@ nav {
 .project {
     height: 1250px;
     width: 100%;
-    background: linear-gradient( #E9F1FA 60%, #cae3ff);
+    background: linear-gradient( var(--color-lightblue0) 60%, var(--color-lightblue1));
 
 }
 
@@ -198,8 +472,8 @@ nav {
     justify-content: center;
     align-items: center;
     height: 15%;
-    color: #00ABE4;
-    background-color: #f6fafe;
+    color: var(--color-blue);
+    background-color: var(--color-white);
 }
 
 .project-button-container {
@@ -214,7 +488,7 @@ nav {
 .project-button {
     margin: auto;
     color: white;
-    background-color: #00ABE4;
+    background-color: var(--color-blue);
     border: none;
     width: 120px;
     height: 45px;
@@ -233,7 +507,7 @@ nav {
 
 .contact {
     height: 70vh;
-    background-color: #f6fafe;
+    background-color: var(--color-white);
     position: relative;   
     padding: 12% 10%;
 }
@@ -272,7 +546,27 @@ nav {
 }
 
 .footer {
-    border-top: 3px double #00ABE4;
+    border-top: 3px double var(--color-blue);
     width: 100%;
     height: 15vh;
+}
+
+.hidden-top {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(-50%); 
+}
+
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }

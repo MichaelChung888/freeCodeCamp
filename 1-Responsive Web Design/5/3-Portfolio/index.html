@@ -7,28 +7,45 @@
     <link href="styles.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/7d6d0311a0.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/> -->
+    <script defer src="app.js"></script>
 </head>
 <body>
+
     <nav id="navbar">
-        <h1 class="nav-header">Michael</h1>
-        <ul class="nav-list">
+        <h1 class="nav-header hidden-top">Michael</h1>
+        <ul class="nav-list hidden-top">
             <li><a href="#welcome-section"><i id="nav-icon" class="fa-solid fa-house" style="color: #00abe4;"></i>Home</a></li>
             <li><a href="#about"><i id="nav-icon" class="fa-solid fa-user" style="color: #00abe4;"></i>About</a></li>
             <li><a href="#project"><i id="nav-icon" class="fa-solid fa-folder-open" style="color: #00abe4;"></i>Portfolio</a></li>
             <li><a href="#contact"><i id="nav-icon" class="fa-solid fa-phone" style="color: #00abe4;"></i>Contact</a></li>
         </ul>
-        <div class="nav-button-container"><a href="#contact"><button class="nav-button">Hire Me</button></a></div>
+        <div class="nav-button-container hidden-top"><a href="#contact"><button class="nav-button">Hire Me</button></a></div>
     </nav>
+
     <section id="welcome-section">
-        <div class="welcome-grid">
+        <div class="upper-squares">
+            <div class="upper-square-1"></div>
+            <div class="upper-square-2"></div>
+        </div>
+        <div class="welcome-grid hidden-left">
             <div>
-                <h1 class="welcome-header">I'm a Software Developer </h1>
+                <ul class="dynamic-header">
+                    <li><span class="line1">Hi, my name is</span></li>
+                    <li><span class="line2">Michael Y.H Chung</span></li>
+                    <li><span class="line3">I'm a Junior Software</span></li>
+                    <li><span class="line4">and Web Developer</span></li>
+                </ul>
+                <!--
                 <h1 class="welcome-header">Michael Y.H Chung</h1>
-                <p class="welcome-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctusnec ullamcorper mattis, pulvinar dapibus leop llamcorper, lorem ipsum.</p>
+                <h1 class="welcome-header">I'm a Junior Software Developer </h1>
+                -->
+                <p class="welcome-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctusnec ullamcorper mattis, pulvinar dapibus leop llamcorper, lorem ipsum.</p>
             </div>
             <img src="picture.jpg" class="picture">
         </div>
     </section>
+
     <section id="about" class="about">
         <h2 class="about-header">About me</h2>
         <div class="br"></div>
@@ -49,6 +66,7 @@
             </div>
         </div>
     </section>
+
     <section id="project" class="project">
         <div class="project-padding">
             <h2 class="project-header">Here is a showcase of some of my work</h2>
@@ -85,6 +103,7 @@
         </div>
         <div class="project-button-container"><a><button class="project-button">Show all</button></a></div>
     </section>
+
     <section id="contact" class="contact">
         <h2 class="contact-header">Let's Work Together...</h2>
         <div class="br"></div>

@@ -17,8 +17,14 @@
             <li><a class="nav-link" href="#Comments">Comments</a></li>
             <li><a class="nav-link" href="#C++_Variables">C++ Variables</a></li>
             <li><a class="nav-link" href="#Variable_Operations">Variable Operations</a></li>
+            <li><a class="nav-link" href="#Conditions">Conditions</a></li>
+            <li><a class="nav-link" href="#If-Else-Statements">If Else Statements</a></li>
+            <li><a class="nav-link" href="#Shorthand-If-Else-Statements">Shorthand If Else Statements</a></li>
+            <li><a class="nav-link" href="#While-Loops">While Loops</a></li>
+            <li><a class="nav-link" href="#For-Loops">For Loops</a></li>
             <li><a class="nav-link" href="#Reference">Reference</a></li>
-        </ul>   
+        </ul>  
+        <p class="nav-p">Michael Chung</p> 
     </nav>
     <main id="main-doc">
 
@@ -197,8 +203,132 @@
 
         <div class="br"></div>
 
+        <section class="main-section" id="Conditions">
+            <header>Conditions</header>
+            <p class="indent">C++ supports basic mathematical logical conditions.</p>
+            <p class="indent">These condtions return boolean values(true or false) depending on the outcome of the statement</p>
+            <p class="indent">Here's a list of the logical condition operators</p>
+            <ul class="indent-bul">
+                <li>Less than: a < b</li>
+                <li>Less than or equal to: a <= b</li>
+                <li>Greater than: a > b</li>
+                <li>Greater than or equal to: a >= b</li>
+                <li>Equal to a == b</li>
+                <li>Not Equal to: a != b</li>
+            </ul>
+        </section>        
+
+        <div class="br"></div>
+
+        <section class="main-section" id="If-Else-Statements">
+            <header>If Else Statements</header>
+            <p class="indent">We can apply the condition from the previous section in the following conditional statements:</p>
+            <ul class="indent-bul">
+                <li>Use <label class="bold">if</label> to specify a block of code to be executed, if a specified condition is true</li>
+                <li>Use <label class="bold">else</label> to specify a block of code to be executed, if the same condition is false</li>
+                <li>Use <label class="bold">else</label> if to specify a new condition to test, if the first condition is false</li>
+            </ul>
+            <p class="indent">The syntax for the code can be demonstrated in the following:</p>
+            <pre><code>
+        if (condition) {
+            <label class="green">// block of code to be executed if the condition is true</label>
+        }      
+        else if (new condition) {
+            <label class="green">// block of code to be executed if the new condition is true</label>
+        }  
+        else {
+            <label class="green">// block of code to be executed if none of the conditions are true</label>
+        }       
+            </code></pre>
+            <p class="indent">These conditional statements can be useful in many scenarios where you would like to check a condtion.</p>
+            <p class="indent">An example can be seen here where we take the comparison between 2 variables.</p>
+            <pre><code>
+        int x = 20;
+        int y = 18;
+        if (x > y) {
+           std::cout << "x is greater than y" << std::endl;
+        }     
+            </code></pre>
+        </section>
+
+        <div class="br"></div>
+
+        <section class="main-section" id="Shorthand-If-Else-Statements">
+            <header>Shorthand If Else Statements (Ternary Operator)</header>
+            <p class="indent">There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.</p>
+            <p class="indent">It can be used to replace multiple lines of code with a single line.</p>
+            <p class="indent">It is often used to replace simple if else statements:</p>
+            <pre><code>
+        variable = (condition) ? expressionTrue : expressionFalse;     
+            </code></pre>
+            <p class="indent">Hence instead of writing:</p>
+            <pre><code>
+        int time = 20;
+        if (time < 18) {
+            cout << "Good day.";
+        } else {
+            cout << "Good evening.";
+        }   
+            </code></pre>
+            <p class="indent">You can write the following instead:</p>
+            <pre><code>
+        int time = 20;
+        string result = (time < 18) ? "Good day." : "Good evening.";
+        cout << result; 
+            </code></pre>
+        </section>        
+
+        <div class="br"></div>
+
+        <section class="main-section" id="While-Loops">
+            <header>While Loops</header>
+            <p class="indent">Loops can execute a block of code as long as a specified condition is reached.</p>
+            <p class="indent">Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+            <p class="indent">Here is the syntax for a while loop:</p>
+            <pre><code>
+        while (condition) {
+            <label class="green">// code block to be executed</label>
+        }    
+            </code></pre>
+            <p class="indent">In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
+            <pre><code>
+        int i = 0;
+        while (i < 5) {
+            cout << i << "\n";
+            i++;
+        }
+            </code></pre>
+        <p class="indent bold">Note: Do not forget to increment the condition, otherwise the loop never ends!</p>
+        </section>  
+
+        <div class="br"></div>
+
+        <section class="main-section" id="For-Loops">
+            <header>For Loops</header>
+            <p class="indent">When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+            <p class="indent">Here is the syntax for a for loop:</p>
+            <pre><code>
+        for (statement 1; statement 2; statement 3) {
+            <label class="green">// code block to be executed</label>
+        }
+            </code></pre>
+            <ul class="indent-bul">
+                <li><label class="bold">Statement 1</label> is executed (one time) before the execution of the code block.</li>
+                <li><label class="bold">Statement 2</label> defines the condition for executing the code block.</li>
+                <li><label class="bold">Statement 3</label> is executed (every time) after the code block has been executed.</li>
+            </ul>
+            <p class="indent">The example below will print the numbers 0 to 4:</p>
+            <pre><code>
+        for (int i = 0; i < 5; i++) {
+            std::cout << i << "\n";
+        }
+            </code></pre>
+        </section>  
+
+        <div class="br"></div>
+
         <section class="main-section" id="Reference">
-            <header  >Reference</header>
+            <header>Reference</header>
             <p class="indent">All the documentation in this page is taken from <a href="https://www.w3schools.com/cpp/">W3Schools</a></p>
         </section>
     </main>

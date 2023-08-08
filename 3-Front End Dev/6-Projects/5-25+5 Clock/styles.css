@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+body {
+    background-color: peachpuff;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    top: 5vh;
+    position: absolute;
+}
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10vw;
+    width: 50vw;
+    margin: 5%;
+}
+
+.length {
+    border: 2px black solid;
+    padding: 5%;
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 30%;
+}
+
+.length button {
+    margin: 3%;
+}
+
+.length p {
+    margin: 3%;
+    width: 30%;
+    font-size: 2rem;
+    font-family: 'Calculator', sans-serif;
+}
+
+h3 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.timer-label {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 25%;
+    width: 30vw;
+    column-gap: 0;
+}
+
+.timer-label p {
+    font-size: 3rem;
+    font-family: 'Calculator', sans-serif;
+}
+
+.session-time {
+    border: 2px black solid;
+    padding: 10%;
+    text-align: center;
+    position: relative;  
+    left: 1px;
+    border-radius: 25% 0 0 0;
+    background-color: lightcoral;
+}
+
+.break-time {
+    border: 2px black solid;
+    padding: 10%;
+    text-align: center;
+    position: relative;  
+    left: -1px;
+    border-radius: 0 25% 0 0;
+    background-color: lightcyan;
+}
+
+.controls {
+    border: 2px black solid;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    position: relative;
+    top: -2px;
+    left: 1px;
+    width: calc(100% - 2px);
+    display: flex;
+    justify-content: space-evenly;
+    background-color: gray;
+    align-items: center;
+}
+
+button {
+    border-radius: 30%;
+    border: 2px solid black;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+p {
+    font-size: 2rem;
+    font-family: 'Calculator', sans-serif;
+    margin: 0;
+}
